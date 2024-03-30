@@ -4,18 +4,22 @@
 // // rootElement.getAttribute(); - to get the attribute
 // // rootElement.setAttribute(); - to set the attribute
 // // rootElement.removeAttribute(); - to remove the attribute
-// add props to customize or remove the button text
+// // add props to customize or remove the button text
 // // add props to set starting theme
 
 import { useState, useEffect } from "react";
 
-const ColorTheme = (props: { theme?: string }) => {
-    // ? longer way to write this all out
+const ColorTheme = (props: { theme?: string; textVisible?: boolean; text?: string }) => {
+    // ? longer way to write this all out, just put props.theme || "dark" right into the useState as it's value
     // const initialTheme = props.theme || "dark";
     // const [theme, setTheme] = useState(initialTheme);
-    const [theme, setTheme] = useState(props.theme || "dark");
+    // ? seemed redundant to have the value here and repeated again in the useEffect
+    // const [theme, setTheme] = useState(props.theme || "dark");
+    // const [text, setText] = useState(props.text || "Change Theme");
+    const [theme, setTheme] = useState("");
+    const [text, setText] = useState("");
 
-    // * my first go
+    // * first go - setting/changing theme
     // const rootElement = document.documentElement;
     // rootElement.setAttribute("data-bs-theme", theme);
 
@@ -25,7 +29,7 @@ const ColorTheme = (props: { theme?: string }) => {
     //     setTheme(newTheme);
     // };
 
-    // * second go
+    // * second go - setting/changing theme
     // useEffect(() => {
     //     const rootElement = document.documentElement;
     //     rootElement.setAttribute("data-bs-theme", theme);
@@ -38,7 +42,7 @@ const ColorTheme = (props: { theme?: string }) => {
     //     setTheme(theme === "dark" ? "light" : "dark");
     // };
 
-    // * third go
+    // * third go - setting/changing theme. Completely reactive, changes show without refreshing page
     useEffect(() => {
         setTheme(props.theme || "dark");
     }, [props.theme]);
@@ -52,11 +56,16 @@ const ColorTheme = (props: { theme?: string }) => {
         setTheme(theme === "dark" ? "light" : "dark");
     };
 
+    // * first go - setting/changing text. Based off of what was done for changing/setting theme. Completely reactive, changes show without refreshing page
+    useEffect(() => {
+        setText(props.text || "Change Theme");
+    }, [props.text]);
+
     return (
         <>
             <button onClick={toggleTheme} className="btn btn-outline-secondary">
-                <i className={theme === "dark" ? "bi-moon" : "bi-brightness-high"}></i>
-                Change Theme
+                <i className={theme === "dark" ? "bi bi-moon-fill" : "bi bi-brightness-high-fill"}></i>
+                {props.textVisible !== false && <span className="ms-1">{text}</span>}
             </button>
         </>
     );
