@@ -3,7 +3,7 @@ import ColorTheme from "./components/ColorTheme";
 import { useEffect } from "react";
 
 function App() {
-    // * to set the <title> for each page, do this
+    // to set the <title> for each page, do this
     useEffect(() => {
         document.title = "React Component Library";
     }, []);
