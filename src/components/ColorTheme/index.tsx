@@ -5,26 +5,56 @@
 // // rootElement.setAttribute(); - to set the attribute
 // // rootElement.removeAttribute(); - to remove the attribute
 // add props to customize or remove the button text
+// // add props to set starting theme
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const ColorTheme = (props) => {
-    const [theme, setTheme] = useState("dark");
+const ColorTheme = (props: { theme?: string }) => {
+    // ? longer way to write this all out
+    // const initialTheme = props.theme || "dark";
+    // const [theme, setTheme] = useState(initialTheme);
+    const [theme, setTheme] = useState(props.theme || "dark");
 
-    const onClick = () => {
+    // * my first go
+    // const rootElement = document.documentElement;
+    // rootElement.setAttribute("data-bs-theme", theme);
+
+    // const toggleTheme = () => {
+    //     const newTheme = theme === "dark" ? "light" : "dark";
+    //     rootElement.setAttribute("data-bs-theme", newTheme);
+    //     setTheme(newTheme);
+    // };
+
+    // * second go
+    // useEffect(() => {
+    //     const rootElement = document.documentElement;
+    //     rootElement.setAttribute("data-bs-theme", theme);
+    // }, [theme]);
+
+    // const toggleTheme = () => {
+    //     // ? longer way to write this all out
+    //     // const newTheme = theme === "dark" ? "light" : "dark";
+    //     // setTheme(newTheme);
+    //     setTheme(theme === "dark" ? "light" : "dark");
+    // };
+
+    // * third go
+    useEffect(() => {
+        setTheme(props.theme || "dark");
+    }, [props.theme]);
+
+    useEffect(() => {
         const rootElement = document.documentElement;
-        if (rootElement.getAttribute("data-bs-theme") === "dark") {
-            rootElement.setAttribute("data-bs-theme", "light");
-            setTheme("light");
-        } else {
-            rootElement.setAttribute("data-bs-theme", "dark");
-            setTheme("dark");
-        }
+        rootElement.setAttribute("data-bs-theme", theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(theme === "dark" ? "light" : "dark");
     };
 
     return (
         <>
-            <button onClick={() => onClick()} className="btn btn-outline-secondary">
+            <button onClick={toggleTheme} className="btn btn-outline-secondary">
                 <i className={theme === "dark" ? "bi-moon" : "bi-brightness-high"}></i>
                 Change Theme
             </button>
