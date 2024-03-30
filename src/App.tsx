@@ -1,7 +1,7 @@
 import "./App.scss";
 import { useEffect } from "react";
 import ColorTheme from "./components/ColorTheme";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 
 function App() {
     // to set the <title> for each page, do this

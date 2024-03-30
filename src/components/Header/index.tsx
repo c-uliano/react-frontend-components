@@ -1,6 +1,5 @@
 // TODO
 
-import { Link } from "react-router-dom";
 import ColorTheme from "../ColorTheme";
 
 const Header = () => {
