@@ -1,6 +1,8 @@
 # React Component Library
 
-Styled using Bootstrap
+Styled using Bootstrap.
+
+How is this different than React Bootstrap? I'm building it from scratch so I learn more.
 
 ## Components
 
