@@ -1,7 +1,13 @@
 import "./App.scss";
 import ColorTheme from "./components/ColorTheme";
+import { useEffect } from "react";
 
 function App() {
+    // * to set the <title> for each page, do this
+    useEffect(() => {
+        document.title = "React Component Library";
+    }, []);
+
     return (
         <div className="container-sm">
             <div className="m-2">
