@@ -1,15 +1,15 @@
 // TODO
 
 import ColorTheme from "../ColorTheme";
+import Logo from "../Logo";
+import NavLink from "../NavLink";
 
 const Header = () => {
     return (
         <header className="border-bottom border-primary">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
-                        Navbar
-                    </a>
+                    <Logo />
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -22,21 +22,9 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Features
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Pricing
-                                </a>
-                            </li>
+                            <NavLink text="Home" />
+                            <NavLink text="About" />
+                            <NavLink text="Contact" />
                             <li className="nav-item">
                                 <ColorTheme textVisible={false} />
                             </li>
