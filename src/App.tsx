@@ -1,6 +1,5 @@
 import "./App.scss";
 import { useEffect } from "react";
-import ColorTheme from "./components/ColorTheme";
 import Header from "./components/Header";
 
 function App() {

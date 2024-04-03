@@ -9,7 +9,7 @@ const Header = () => {
         <header className="border-bottom border-primary">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <Logo />
+                    <Logo altText="The Logo" />
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -25,9 +25,7 @@ const Header = () => {
                             <NavLink text="Home" />
                             <NavLink text="About" />
                             <NavLink text="Contact" />
-                            <li className="nav-item">
-                                <ColorTheme textVisible={false} />
-                            </li>
+                            <ColorTheme />
                         </ul>
                     </div>
                 </div>
