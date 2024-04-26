@@ -9,7 +9,7 @@
 
 import { useState, useEffect } from "react";
 
-const ColorTheme = (props: { theme?: string; textVisible?: boolean; text?: string }) => {
+const ColorThemeSimple = (props: { theme?: string; textVisible?: boolean; text?: string }) => {
     // ? longer way to write this all out, just put props.theme || "dark" right into the useState as it's value
     // const initialTheme = props.theme || "dark";
     // const [theme, setTheme] = useState(initialTheme);
@@ -62,51 +62,11 @@ const ColorTheme = (props: { theme?: string; textVisible?: boolean; text?: strin
     }, [props.text]);
 
     return (
-        <>
-            <div className="dropdown">
-                <button
-                    className="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
-                    id="bd-theme"
-                    type="button"
-                    aria-expanded="false"
-                    data-bs-toggle="dropdown"
-                    data-bs-display="static"
-                    aria-label="Toggle theme (dark)">
-                    <i className="bi bi-moon-fill"></i>
-                    <span className="d-lg-none ms-2" id="bd-theme-text">
-                        Toggle theme
-                    </span>
-                </button>
-                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-                    <li>
-                        <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                            <i className="bi bi-moon-fill"></i>
-                            Light
-                            <i className="bi bi-check2"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            type="button"
-                            className="dropdown-item d-flex align-items-center active"
-                            data-bs-theme-value="dark"
-                            aria-pressed="true">
-                            <i className="bi bi-moon-fill"></i>
-                            Dark
-                            <i className="bi bi-check2"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" className="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
-                            <i className="bi bi-moon-fill"></i>
-                            Auto
-                            <i className="bi bi-check2"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </>
+        <button onClick={toggleTheme} className="btn btn-outline-secondary">
+            <i className={theme === "dark" ? "bi bi-moon-fill" : "bi bi-brightness-high-fill"}></i>
+            {props.textVisible !== false && <span className="ms-1">{text}</span>}
+        </button>
     );
 };
 
-export default ColorTheme;
+export default ColorThemeSimple;

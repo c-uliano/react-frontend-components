@@ -25,7 +25,7 @@ const Header = () => {
                             <NavLink text="Home" />
                             <NavLink text="About" />
                             <NavLink text="Contact" />
-                            <ColorTheme />
+                            <ColorTheme textVisible={false} />
                         </ul>
                     </div>
                 </div>
