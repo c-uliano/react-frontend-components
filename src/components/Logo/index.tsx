@@ -5,20 +5,20 @@
 // prop to size the logo?
 // //prop to useLink
 // //if useLink = true then it's Link and to, else anchor and href
-// prop for the link
+// //prop for the link
 
 import { Link } from "react-router-dom";
 
-const Logo = (props: { urlLink: string; altText: string; useLink?: boolean; newTab?: boolean; logoFile?: string }) => {
+const Logo = (props: { url: string; altText: string; useLink?: boolean; newTab?: boolean; logoFile?: string }) => {
     return (
         <>
             {props.useLink ? (
-                <Link className="navbar-brand" to="/">
+                <Link className="navbar-brand" to={props.url}>
                     {props.logoFile ? <img src={props.logoFile} alt={props.altText} /> : props.altText}
                     {/* <img src="/assets/logo-slate.png" alt="" /> */}
                 </Link>
             ) : (
-                <a className="navbar-brand" href="#" target={props.newTab ? "_blank" : undefined}>
+                <a className="navbar-brand" href={props.url} target={props.newTab ? "_blank" : undefined}>
                     {props.logoFile ? <img src={props.logoFile} alt={props.altText} /> : props.altText}
                 </a>
             )}
