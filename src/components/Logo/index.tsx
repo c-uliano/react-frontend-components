@@ -7,6 +7,8 @@
 // //if useLink = true then it's Link and to, else anchor and href
 // //prop for the link
 
+// update structure so if useLink is false it does the anchor, use &&. And then below that just have <Link> set up as the default. So you would really only use this prop when you need to set it to false to use an anchor
+
 import { Link } from "react-router-dom";
 
 const Logo = (props: { url: string; altText: string; useLink?: boolean; newTab?: boolean; logoFile?: string }) => {
