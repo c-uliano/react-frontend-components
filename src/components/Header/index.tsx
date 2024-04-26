@@ -9,7 +9,7 @@ const Header = () => {
         <header className="border-bottom border-primary">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <Logo altText="The Logo" />
+                    <Logo altText="The Logo" urlLink="#" />
                     <button
                         className="navbar-toggler"
                         type="button"
