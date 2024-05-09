@@ -6,6 +6,8 @@
 // //prop to useLink
 // //if useLink = true then it's Link and to, else anchor and href
 // //prop for the link
+// prop for sizing an image logo
+// prop for sizing a text logo?
 
 // update structure so if useLink is false it does the anchor, use &&. And then below that just have <Link> set up as the default. So you would really only use this prop when you need to set it to false to use an anchor
 
