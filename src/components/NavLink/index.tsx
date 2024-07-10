@@ -1,10 +1,10 @@
 // TODO
 // prop for text
-// should this be a Link instead of anchor?
+// conditional rendering between Link and anchor
 // prop to show icon
-// prop to select icon
+// prop to set icon
 // prop for url
-// prop for target="_blank" - does this work on Link?
+// prop for target="_blank"
 
 const NavLink = (props: { text: string }) => {
     return (
