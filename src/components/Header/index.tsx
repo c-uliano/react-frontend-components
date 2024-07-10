@@ -3,12 +3,7 @@
 import ColorTheme from "../ColorTheme";
 import Logo from "../Logo";
 import NavLink from "../NavLink";
-
-const navLinksArr = [
-    { useLink: false, url: "#", icon: "bi-boombox-fill", text: "Home" },
-    { useLink: false, url: "#", text: "About" },
-    { useLink: false, url: "#", text: "Contact", icon: "bi-boombox-fill", hideText: true }
-];
+import {navLinksArr} from "./util";
 
 const Header = () => {
     return (
