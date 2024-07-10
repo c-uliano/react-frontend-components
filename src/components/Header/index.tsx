@@ -20,9 +20,9 @@ const Header = () => {
                         aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <NavLink text="Home" />
+                    <div className="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                        <ul className="navbar-nav align-items-center">
+                            <NavLink icon="bi-boombox-fill" text="Home" />
                             <NavLink text="About" />
                             <NavLink text="Contact" />
                             <ColorTheme textVisible={false} />
