@@ -37,7 +37,7 @@ const Header = () => {
                             {navLinksArr.map((item, index) => (
                                 <NavLink key={index} {...item} />
                             ))}
-                            <ColorTheme textVisible={false} /> 
+                            <ColorTheme /> 
 
                             
                         </ul>

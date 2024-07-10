@@ -64,7 +64,7 @@ const ColorThemeSimple = (props: { theme?: string; textVisible?: boolean; text?:
     return (
         <button onClick={toggleTheme} className="btn btn-outline-secondary"> {/* try to update this to actual Button component, once it's created */}
             <i className={theme === "dark" ? "bi bi-moon-fill" : "bi bi-brightness-high-fill"}></i>
-            {props.textVisible !== false && <span className="ms-1">{text}</span>}
+            {props.textVisible && <span className="ms-1">{text}</span>}
         </button>
     );
 };

@@ -10,12 +10,17 @@ How is this different than React Bootstrap? I'm building it from scratch so I le
 
 To toggle between light and dark mode.
 
-Props to set the starting theme, decide to show or hide button text, and set the button text.
+None of the props are required. Used without props will display an icon-only button and the color mode will default to dark.
+
+Multiple props to customize the ColorTheme
+- theme (optional, string): to set the default color theme. If not included it defaults to dark
+- textVisible (optional, boolean): default is just the icon. If you want to see text next to the icon this has to be `true`
+- text (optional, string): customize what text to display. Default is "Change Theme". `textVisible` needs to be `true` for `text` to display. 
 
 
 ### Logo
 
-Multiple props to customize your logo
+Multiple props to customize the Logo
 - url (required, string): the link
 - altText (required, string): text to be used for the `alt` tag. Required because if no logo file is uploaded the `alt` text is displayed in it's place
 - useLink (optional, boolean): set to `false` if you want to use the `anchor` tag option. `Link` will be set by default, but that will throw errors if the app isn't set up to use `react-router-dom`
