@@ -1,12 +1,14 @@
 // TODO
 // //prop for text
-// prop to hide text and only show icon
+// //prop to hide text and only show icon
 // //prop to set icon
-// prop for url
-// prop for target="_blank"
-// conditional rendering between Link and anchor - do this last
+// //prop for url
+// //prop for target="_blank"
+// //conditional rendering between Link and anchor - do this last
 
-const NavLink = (props: { text: string; icon?: string; iconSize?: string; }) => {
+import { Link } from "react-router-dom";
+
+const NavLink = (props: { text: string; icon?: string; iconSize?: string; hideText?: boolean; url: string; newTab?: boolean; useLink?: boolean; }) => {
     // * take one
     // const iconSizeStyle = {
     //     fontSize: props.iconSize || "inherit"
@@ -23,9 +25,22 @@ const NavLink = (props: { text: string; icon?: string; iconSize?: string; }) => 
 
     return (
         <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="#">
-                {props.icon && <i style={iconSizeStyle} className={`bi ${props.icon} pe-1`}></i>}{props.text}
-            </a>
+
+            {props.useLink === false ? (
+                <a className="nav-link" aria-current="page" href={props.url} target={props.newTab ? "_blank" : undefined}>
+                    {props.icon && <i style={iconSizeStyle} className={`bi ${props.icon} pe-1`}></i>}
+                    {props.icon && props.hideText ? "" : props.text}
+                </a>
+            ) : (
+                <Link className="nav-link" aria-current="page" to={props.url} target={props.newTab ? "_blank" : undefined}>
+                    {props.icon && <i style={iconSizeStyle} className={`bi ${props.icon} pe-1`}></i>}
+                    {props.icon && props.hideText ? "" : props.text}
+                </Link>
+            )}
+
+
+
+            
         </li>
     );
 };
