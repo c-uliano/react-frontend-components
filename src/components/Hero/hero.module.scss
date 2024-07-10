@@ -1,0 +1,21 @@
+.bgHero {
+    position: relative;
+    background-color: #000000;
+    mix-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgHeroBefore {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+}

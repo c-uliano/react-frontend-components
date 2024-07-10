@@ -1,6 +1,7 @@
 import "./App.scss";
 import { useEffect } from "react";
 import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
 function App() {
     // to set the <title> for each page, do this
@@ -11,6 +12,7 @@ function App() {
     return (
         <div className="container-sm">
             <Header />
+            <Hero />
             <div className="m-2">
                 <p>The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to show or hide button text, and set the button text.</p>
                 <p>The <code>Logo</code> component is partially working. Using the <code>anchor</code> is completely finished, using the <code>Link</code> is still in development.</p>
