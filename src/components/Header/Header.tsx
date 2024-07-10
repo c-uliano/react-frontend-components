@@ -1,8 +1,8 @@
 // TODO
 
-import ColorTheme from "../ColorTheme";
-import Logo from "../Logo";
-import NavLink from "../NavLink";
+import ColorTheme from "../ColorTheme/ColorTheme";
+import Logo from "../Logo/Logo";
+import NavLink from "../NavLink/NavLink";
 import {navLinksArr} from "./util";
 
 const Header = () => {
