@@ -25,7 +25,7 @@ const Logo = (props: { url: string; altText: string; useLink?: boolean; newTab?:
                     {props.logoFile ? <img src={props.logoFile} width={props.size} alt={props.altText} /> : <span className={styles.logoText}>{props.altText}</span>}
                 </a>
             ) : (
-                <Link className="navbar-brand" to={props.url}>
+                <Link className="navbar-brand" to={props.url} target={props.newTab ? "_blank" : undefined}>
                     {props.logoFile ? <img src={props.logoFile} width={props.size} alt={props.altText} /> : <span className={styles.logoText}>{props.altText}</span>}
                 </Link>
             )}
