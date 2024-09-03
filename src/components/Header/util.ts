@@ -7,5 +7,5 @@
 export const navLinksArr = [
     { useLink: false, url: "#", icon: "bi-boombox-fill", text: "Home" },
     { useLink: false, url: "#", text: "About" },
-    { useLink: false, url: "#", text: "Contact" }
+    { useLink: false, url: "#", text: "Contact", newTab: true }
 ];

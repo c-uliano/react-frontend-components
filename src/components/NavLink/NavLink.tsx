@@ -22,7 +22,7 @@ const NavLink = (props: { text: string; icon?: string; iconSize?: string; hideTe
     // I can't get this to work. I want everything to be conditionally rended, including the style attribute.
     // const iconSizeStyle = props.iconSize && `style="font-size: ${props.iconSize}"`;
 
-
+    // TODO: could use refactoring, see Logo for example
     return (
         <li className="nav-item">
 
