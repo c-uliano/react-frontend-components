@@ -14,3 +14,4 @@ To control the links in the navigation menu.
 ### Future Enhancements
 - `icon` needs some refactoring so it can use icons from other libraries, like FontAwesome or Material
 - work on fixing the alignment problem with `iconSize`
+- expand the props to include hover effect options. Put options to choose from in a union type or enom in a `utli.ts` file, and add appropriate styling in a scss module file
