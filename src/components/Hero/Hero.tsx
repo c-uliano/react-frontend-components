@@ -20,8 +20,9 @@
 // need a prop to choose which type of button is being used, i.e. btn-primary
 
 import styles from "./hero.module.scss";
-// TODO: can this long list of props be put in the utils folder and just spread an object here?
-const Hero = (props: { imgUrl: string; height?: string; bgPosition?: string; h1Header?: string; content?: string; link?: string; btnText?: string;}) => {
+import {heroProps} from "./utils";
+// // TODO: can this long list of props be put in the utils folder and just use an interface here?
+const Hero = (props: heroProps) => {
     const bgHero: any = {
         height: `${props.height}`
     };
