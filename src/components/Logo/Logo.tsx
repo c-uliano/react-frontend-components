@@ -18,17 +18,42 @@ import { Link } from "react-router-dom";
 import styles from './logo.module.scss';
 
 const Logo = (props: { url: string; altText: string; useLink?: boolean; newTab?: boolean; logoFile?: string; size?: string; }) => {
+
+    const img = props.logoFile ? (
+        <img src={props.logoFile} width={props.size} alt={props.altText} />
+      ) : (
+        <span style={{ fontSize: props.size }} className={styles.logoText}>
+          {props.altText}
+        </span>
+      );
+
+      const attributes = {
+        className: "navbar-brand",
+        target: props.newTab ? "_blank" : undefined,
+      };
+
     return (
         <>
             {props.useLink === false ? (
+                <a href={props.url} {...attributes}>
+                    {img}
+                </a>
+            ) : (
+                <Link to={props.url} {...attributes}>
+                    {img}
+                </Link>
+            )}
+
+            {/* OG. Lot of repetitive code, trying to refactor */}
+            {/* {props.useLink === false ? (
                 <a className="navbar-brand" href={props.url} target={props.newTab ? "_blank" : undefined}>
-                    {props.logoFile ? <img src={props.logoFile} width={props.size} alt={props.altText} /> : <span className={styles.logoText}>{props.altText}</span>}
+                    {props.logoFile ? <img src={props.logoFile} width={props.size} alt={props.altText} /> : <span style={{fontSize: props.size}} className={styles.logoText}>{props.altText}</span>}
                 </a>
             ) : (
                 <Link className="navbar-brand" to={props.url} target={props.newTab ? "_blank" : undefined}>
-                    {props.logoFile ? <img src={props.logoFile} width={props.size} alt={props.altText} /> : <span className={styles.logoText}>{props.altText}</span>}
+                    {props.logoFile ? <img src={props.logoFile} width={props.size} alt={props.altText} /> : <span style={{fontSize: props.size}} className={styles.logoText}>{props.altText}</span>}
                 </Link>
-            )}
+            )} */}
         </>
     );
 };

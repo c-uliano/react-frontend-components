@@ -4,19 +4,12 @@ Styled using Bootstrap.
 
 How is this different than React Bootstrap? I'm building it from scratch so I learn more.
 
+The future goal is to strip this down so it's functional but no longer using Bootstrap for styling, so it can be used with any css framework.
+
 ## Components
 
 - **[ColorTheme](src/components/ColorTheme/README.md)**
-
-### Logo
-
-Multiple props to customize the Logo
-- url (required, string): the link
-- altText (required, string): text to be used for the `alt` tag. Required because if no logo file is uploaded the `alt` text is displayed in it's place
-- useLink (optional, boolean): set to `false` if you want to use the `anchor` tag option. `Link` will be set by default, but that will throw errors if the app isn't set up to use `react-router-dom`
-- newTab (optional, boolean): when set to `true` it will set `target="_blank"`
-- logoFile (optional, string): set the location of the logo file
-- size (optional, string): will set the width of the logo file
+- **[Logo](src/components/Logo/README.md)**
 
 ### NavLink
 Multiple props to customize the NavLink

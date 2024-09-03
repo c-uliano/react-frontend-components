@@ -11,6 +11,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
                     <Logo useLink={false} altText="The Logo" url="#" size="100px" logoFile="../../src/assets/logo-dark.png" />
+                    {/* <Logo useLink={false} altText="The Logo" url="#" size="5em" /> */}
                     <button
                         className="navbar-toggler"
                         type="button"
