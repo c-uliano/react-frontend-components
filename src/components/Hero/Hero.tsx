@@ -9,15 +9,25 @@
 
 // ! I don't remember why the jsx is structured like this, need to look at the example project
 
-import styles from "./hero.module.scss";
+// TODO:
+// //prop for height?, string
+// //prop for image url, string
+// //prop for background position, string
+// //prop for h1
+// //prop for content
+// //prop for link?, string
+// //prop for button (this will eventully have to be refactored to use Button component, not created)
+// need a prop to choose which type of button is being used, i.e. btn-primary
 
-const Hero = (props: any) => {
+import styles from "./hero.module.scss";
+// TODO: can this long list of props be put in the utils folder and just spread an object here?
+const Hero = (props: { imgUrl: string; height?: string; bgPosition?: string; h1Header?: string; content?: string; link?: string; btnText?: string;}) => {
     const bgHero: any = {
         height: `${props.height}`
     };
 
     const bgHeroBefore: any = {
-        backgroundImage: `url(${props.image})`,
+        backgroundImage: `url(${props.imgUrl})`,
         backgroundPosition: `${props.bgPosition}`
     }
 
@@ -30,7 +40,7 @@ const Hero = (props: any) => {
                     <p className="fs-5 mt- text-white">{props.content}</p>
                     {props.link && (
                     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <a href={`${props.link}`} className='btn btn-primary'>{props.btnName}</a>
+                        <a href={`${props.link}`} className='btn btn-primary'>{props.btnText}</a>
                     </div>
                     )}
                 </div>
@@ -38,7 +48,7 @@ const Hero = (props: any) => {
         </div>
     )
 }
-
+// TODO: bgPosition default of center center?
 Hero.defaultProps = {
     height: '50vh'
 };
