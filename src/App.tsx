@@ -13,7 +13,7 @@ function App() {
     return (
         <div className="container-sm">
             <Header />
-            <Hero />
+            <Hero height="500px" />
             <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
 
             <div className="m-2">
