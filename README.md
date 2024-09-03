@@ -10,5 +10,6 @@ The future goal is to strip this down so it's functional but no longer using Boo
 Docmentation on how to use each component can be found within each component's `README.md`, linked below
 
 - **[ColorTheme](src/components/ColorTheme/README.md)**
+- **[Header]()**
 - **[Logo](src/components/Logo/README.md)**
 - **[NavLink](src/components/NavLink/README.md)**

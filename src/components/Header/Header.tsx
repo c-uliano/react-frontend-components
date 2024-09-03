@@ -3,7 +3,7 @@
 import ColorTheme from "../ColorTheme/ColorTheme";
 import Logo from "../Logo/Logo";
 import NavLink from "../NavLink/NavLink";
-import {navLinksArr} from "./util";
+import {navLinksArr} from "./utils";
 
 const Header = () => {
     return (
