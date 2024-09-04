@@ -12,11 +12,20 @@ function App() {
     return (
         <div className="container-sm">
             <Header />
-            <Hero height="2vh"/>
+            <Hero height="3vh" />
             <div className="m-2">
-                <p>The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to show or hide button text, and set the button text.</p>
-                <p>The <code>Logo</code> component is partially working. Using the <code>anchor</code> is completely finished, using the <code>Link</code> is still in development.</p>
-                <p><code>props</code> options include placing the url, choosing the logo file, adding the <code>alt</code> text, setting the width, and more</p>
+                <p>
+                    The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to
+                    show or hide button text, and set the button text.
+                </p>
+                <p>
+                    The <code>Logo</code> component is partially working. Using the <code>anchor</code> is completely finished, using the{" "}
+                    <code>Link</code> is still in development.
+                </p>
+                <p>
+                    <code>props</code> options include placing the url, choosing the logo file, adding the <code>alt</code> text, setting the width,
+                    and more
+                </p>
             </div>
         </div>
     );
