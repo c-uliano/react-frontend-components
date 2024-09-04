@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="container-sm">
             <Header />
-            <Hero height="3vh" />
+            <Hero />
             <div className="m-2">
                 <p>
                     The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to
