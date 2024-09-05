@@ -13,9 +13,8 @@ function App() {
     return (
         <div className="container-sm">
             <Header />
-            <Hero height="3vh" />
+            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" />
             <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
-
             <div className="m-2">
                 <p>
                     The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to
