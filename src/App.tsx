@@ -2,6 +2,7 @@ import "./App.scss";
 import { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Button from "./components/Button/Button";
 
 function App() {
     // to set the <title> for each page, do this
@@ -13,6 +14,8 @@ function App() {
         <div className="container-sm">
             <Header />
             <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" />
+            <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
+
             <div className="m-2">
                 <p>
                     The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to
