@@ -34,7 +34,7 @@ export interface ButtonProps {
     btnType?: ButtonTypes,
     type?: InputTypes,
     icon?: string, // if this is truthy then an icon displays
-    iconPosition?: IconPosition,
+    iconPosition?: IconPosition, // required, no default icon placement
     hideText?: boolean,
     newTab?: boolean
 }
