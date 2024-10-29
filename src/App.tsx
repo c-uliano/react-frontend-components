@@ -14,7 +14,7 @@ function App() {
         <div className="container-sm">
             <Header />
             <Hero />
-            <Button text="Button Here" variant="btn-secondary" btnType="anchor" />
+            <Button text="Button Here" variant="btn-outline-secondary" btnType="anchor" />
             <div className="m-2">
                 <p>The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to show or hide button text, and set the button text.</p>
                 <p>The <code>Logo</code> component is partially working. Using the <code>anchor</code> is completely finished, using the <code>Link</code> is still in development.</p>
