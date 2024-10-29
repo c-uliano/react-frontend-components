@@ -20,6 +20,7 @@
 
 import styles from "./hero.module.scss";
 import { HeroProps } from "./utils";
+import Button from "../Button/Button";
 // // TODO: can this long list of props be put in the utils folder and just use an interface here?
 const Hero = (props: HeroProps) => {
     const bgHero: object = {
@@ -40,9 +41,10 @@ const Hero = (props: HeroProps) => {
                     <p className="fs-5 mt- text-white">{props.content}</p>
                     {props.link && (
                         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <a href={`${props.link}`} className="btn btn-primary">
+                            {/* <a href={`${props.link}`} className="btn btn-primary">
                                 {props.btnText}
-                            </a>
+                            </a> */}
+                            <Button {...props.buttonProps} />
                         </div>
                     )}
                 </div>

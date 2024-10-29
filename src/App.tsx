@@ -13,8 +13,12 @@ function App() {
     return (
         <div className="container-sm">
             <Header />
-            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" />
+
+            {/* TODO: move the buttonProps into an object and spread them here */}
+            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" link="#" btnText="Button Here" buttonProps={{url: '/', text: 'Button Here', variant: 'btn-primary', icon: "bi-backpack", iconPosition: 'start'}} />
+
             <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
+
             <div className="m-2">
                 <p>
                     The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to
