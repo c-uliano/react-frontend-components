@@ -14,7 +14,7 @@ function App() {
         <div className="container-sm">
             <Header />
             <Hero />
-            <Button text="Button Here" variant="btn-outline-secondary" icon="bi-backpack-fill" iconPosition="start" btnType="button" />
+            <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
 
             <div className="m-2">
                 <p>The <code>ColorTheme</code> component is now working. Switches between light and dark mode. Can set the starting theme, decide to show or hide button text, and set the button text.</p>

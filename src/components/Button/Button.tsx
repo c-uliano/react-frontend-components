@@ -1,13 +1,14 @@
 import { ButtonProps } from "./utlis";
 import { Link } from "react-router-dom";
+import "./button.scss";
 
 
 const Button = (props: ButtonProps) => {
 
     const buttonClasses = `btn ${props.variant} ${props.size}`;
 
-    // TODO: some icons need align-middle class, others don't. Might need to be a prop, to adjust icon alignment
-    const icon = <i className={`bi ${props.icon} ${props.iconPosition === 'start' ? 'pe-2' : 'ps-2'}`}></i>
+    // //TODO: some icons need align-middle class, others don't. Might need to be a prop, to adjust icon alignment. 
+    const icon = <i className={`bi ${props.icon} ${props.iconPosition === 'start' ? 'pe-2' : 'ps-2'} ${props.iconAlign ? `align-${props.iconAlign}` : "" }`}></i>;
 
 
     // //TODO: put all the repeating classnames into a variable, so it can be changed in one spot
@@ -20,8 +21,10 @@ const Button = (props: ButtonProps) => {
                 return <Link onClick={props.onClick} to={props.url} className={buttonClasses}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</Link>;
             case 'input':
                 // //TODO: type will need updating for prop
-                // TODO: how to display icon for input button type
-                return <input onClick={props.onClick} type={props.type} value={props.text} className={buttonClasses} />;
+                // //TODO: how to display icon for input button type
+                // wrapping it in a span and applying class there could work, need to remove the default input styling though
+                // TODO: future problem during testing, the onClick - does it need moved to the <span>?
+                return (<span className={buttonClasses}>{props.iconPosition === 'start' && icon}<input onClick={props.onClick} type={props.type} value={props.text} />{props.iconPosition === 'end' && icon}</span>);
             case 'anchor':
                 return <a onClick={props.onClick} href={props.url} className={buttonClasses} target={props.newTab ? "_blank" : undefined}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</a>;
             default:
