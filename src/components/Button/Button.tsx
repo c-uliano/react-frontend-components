@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Button = (props: ButtonProps) => {
 
-    const buttonClasses = `btn ${props.variant}`;
+    const buttonClasses = `btn ${props.variant} ${props.size}`;
 
 
     // //TODO: put all the repeating classnames into a variable, so it can be changed in one spot
