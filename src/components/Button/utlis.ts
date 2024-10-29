@@ -4,7 +4,24 @@ type InputTypes = 'input' | 'submit' | 'reset';
 
 type IconPosition = 'start' | 'end';
 
-type buttonVariants = 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark' | 'btn-link';
+type buttonVariants = 
+    'btn-primary' | 
+    'btn-secondary' | 
+    'btn-success' | 
+    'btn-danger' | 
+    'btn-warning' | 
+    'btn-info' | 
+    'btn-light' | 
+    'btn-dark' | 
+    'btn-link' |
+    'btn-outline-primary' |
+    'btn-outline-secondary' |
+    'btn-outline-success' |
+    'btn-outline-danger' |
+    'btn-outline-warning' |
+    'btn-outline-info' |
+    'btn-outline-light' |
+    'btn-outline-dark';
 
 export interface ButtonProps {
     text?: string,
