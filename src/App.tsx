@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Button from "./components/Button/Button";

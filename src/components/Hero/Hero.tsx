@@ -18,6 +18,7 @@
 // //prop for button (this will eventully have to be refactored to use Button component, not created)
 // need a prop to choose which type of button is being used, i.e. btn-primary
 
+import React from "react";
 import styles from "./hero.module.scss";
 import { HeroProps } from "./utils";
 import Button from "../Button/Button";
