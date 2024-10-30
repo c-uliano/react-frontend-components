@@ -10,12 +10,18 @@ function App() {
         document.title = "React Component Library";
     }, []);
 
+    const addButtonProps = {
+        text: 'Button Here', 
+        variant: 'btn-outline-primary', 
+        icon: 'bi-backpack', 
+        iconPosition: 'end'
+    }
+
     return (
         <div className="container-sm">
             <Header />
 
-            {/* TODO: move the buttonProps into an object and spread them here */}
-            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" link="#" btnText="Button Here" buttonProps={{url: '/', text: 'Button Here', variant: 'btn-primary', icon: "bi-backpack", iconPosition: 'start'}} />
+            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" link="#" btnText="Button Here" buttonProps={addButtonProps} />
 
             <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
 
