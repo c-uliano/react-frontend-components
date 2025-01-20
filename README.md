@@ -14,3 +14,4 @@ Docmentation on how to use each component can be found within each component's `
 - **[Logo](src/components/Logo/README.md)**
 - **[NavLink](src/components/NavLink/README.md)**
 - **[Button](src/components/Button/README.md)**
+- **[Hero](src/components/Hero/README.md)**
