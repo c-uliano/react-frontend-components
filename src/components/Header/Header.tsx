@@ -1,5 +1,4 @@
-// TODO
-
+import React from "react";
 import ColorTheme from "../ColorTheme/ColorTheme";
 import Logo from "../Logo/Logo";
 import NavLink from "../NavLink/NavLink";

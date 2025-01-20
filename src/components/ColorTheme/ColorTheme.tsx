@@ -7,7 +7,7 @@
 // // add props to customize or remove the button text
 // // add props to set starting theme
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const ColorThemeSimple = (props: { theme?: string; textVisible?: boolean; text?: string }) => {
     // ? longer way to write this all out, just put props.theme || "dark" right into the useState as it's value

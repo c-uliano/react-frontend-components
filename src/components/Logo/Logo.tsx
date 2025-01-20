@@ -14,6 +14,7 @@
 // tried to do this, think I did it wrong, didn't work. I'm a little out of practice.
 // found another way to update it to achieve the same result. Should default to Link - be sure to have react-router-dom all set up if you decide to use this option
 
+import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./logo.module.scss";
 

@@ -6,6 +6,7 @@
 // //prop for target="_blank"
 // //conditional rendering between Link and anchor - do this last
 
+import React from "react";
 import { Link } from "react-router-dom";
 
 const NavLink = (props: { text: string; icon?: string; iconSize?: string; hideText?: boolean; url: string; newTab?: boolean; useLink?: boolean; }) => {
