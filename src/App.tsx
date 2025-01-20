@@ -14,14 +14,16 @@ function App() {
         text: 'Button Here', 
         variant: 'btn-outline-primary', 
         icon: 'bi-backpack', 
-        iconPosition: 'end'
+        iconPosition: 'end',
+        url: '#',
+        btnType: 'anchor'
     }
 
     return (
         <div className="container-sm">
             <Header />
 
-            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" link="#" btnText="Button Here" buttonProps={addButtonProps} />
+            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" buttonProps={addButtonProps} />
 
             <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
 

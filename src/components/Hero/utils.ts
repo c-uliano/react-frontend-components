@@ -7,8 +7,9 @@ export interface HeroProps {
     bgPosition?: string,
     h1Header?: string,
     content?: string,
-    link?: string,
-    btnText?: string,
+    bgColor?: string,
+    //link?: string, // remove this, unnecessary
+    //btnText?: string, // remove this, unnecessary
     buttonProps?: ButtonProps
 }
 

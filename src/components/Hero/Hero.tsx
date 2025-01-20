@@ -25,7 +25,9 @@ import Button from "../Button/Button";
 // // TODO: can this long list of props be put in the utils folder and just use an interface here?
 const Hero = (props: HeroProps) => {
     const bgHero: object = {
-        height: props.height || "50vh"
+        height: props.height || "50vh",
+        // TODO: move the background-color here so it can be adjusted via props
+        backgroundColor: props.bgColor || '#00000063'
     };
     // //TODO: bgPosition default of center center?
     const bgHeroBefore: object = {
@@ -41,7 +43,7 @@ const Hero = (props: HeroProps) => {
                 <h1 className="display-5 fw-bold text-white mt-2">{props.h1Header}</h1>
                 <div className="col-lg-6 mx-auto">
                     <p className="fs-5 mt- text-white">{props.content}</p>
-                    {props.link && (
+                    {props.buttonProps && (
                         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             {/* <a href={`${props.link}`} className="btn btn-primary">
                                 {props.btnText}
