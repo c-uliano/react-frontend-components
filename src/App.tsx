@@ -1,4 +1,5 @@
 import "./App.scss";
+//import 'bootstrap/dist/css/bootstrap.min.css'; // if I'm just using Bootstrap as-is I can import it here.
 import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
