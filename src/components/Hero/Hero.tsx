@@ -37,6 +37,7 @@ const Hero = (props: HeroProps) => {
         <div className={`px-4 py-5 text-center ${styles.bgHero}`} style={{...bgHero}}>
             <div className={styles.bgHeroBefore} style={{...bgHeroBefore}}></div>
             <div className="py-5 w-100">
+                {/* TODO: if this prop isn't used does this leave a space? Update so if it's not used this doesn't effect the dom at all */}
                 <h1 className="display-5 fw-bold text-white mt-2">{props.h1Header}</h1>
                 <div className="col-lg-6 mx-auto">
                     <p className="fs-5 mt- text-white">{props.content}</p>
@@ -45,6 +46,7 @@ const Hero = (props: HeroProps) => {
                             {/* <a href={`${props.link}`} className="btn btn-primary">
                                 {props.btnText}
                             </a> */}
+                            {/* TODO: need to adjust this so I can pass in Button customization via the Hero component */}
                             <Button {...props.buttonProps} />
                         </div>
                     )}
