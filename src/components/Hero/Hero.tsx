@@ -46,7 +46,6 @@ const Hero = (props: HeroProps) => {
                             {/* <a href={`${props.link}`} className="btn btn-primary">
                                 {props.btnText}
                             </a> */}
-                            {/* TODO: need to adjust this so I can pass in Button customization via the Hero component. Wait...I think I can already do that the way this is set up. Needs testing */}
                             <Button {...props.buttonProps} />
                         </div>
                     )}
