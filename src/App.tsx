@@ -20,6 +20,10 @@ function App() {
         btnType: 'anchor'
     }
 
+    const clickHandler = () => {
+        alert('button clicked');
+    }
+
     return (
         <div className="container-sm">
             <Header />
@@ -36,10 +40,11 @@ function App() {
                 text="Button Here" 
                 variant="btn-primary" 
                 icon="bi-123" 
-                iconPosition="end" 
+                iconPosition="start" 
                 btnType="button" 
                 type="reset" 
                 iconAlign="middle" 
+                onClick={clickHandler}
             />
             
             <br />

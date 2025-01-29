@@ -15,9 +15,9 @@ const MyButton = (props: ButtonProps) => {
         // * will display the appropriate button type depending on prop, with <button> as the default
         switch (props.btnType) {
             case 'button':
-                // TODO: update this to use headless Button
+                // //: update this to use headless Button
                 // return <button onClick={props.onClick} type="button" className={buttonClasses}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</button>;
-                return <Button>{props.text}</Button>;
+                return <Button className={buttonClasses} onClick={props.onClick}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</Button>;
             case 'Link':
                 return <Link onClick={props.onClick} to={props.url} className={buttonClasses}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</Link>;
             case 'input':
@@ -26,7 +26,9 @@ const MyButton = (props: ButtonProps) => {
             case 'anchor':
                 return <a onClick={props.onClick} href={props.url} className={buttonClasses} target={props.newTab ? "_blank" : undefined}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</a>;
             default:
-                return <button onClick={props.onClick} type="button" className={buttonClasses}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</button>
+                // //: update this to use headless Button
+                // return <button onClick={props.onClick} type="button" className={buttonClasses}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</button>
+                return <Button className={buttonClasses} onClick={props.onClick}>{props.iconPosition === 'start' && icon}{props.text}{props.iconPosition === 'end' && icon}</Button>;
         }
     }
 
