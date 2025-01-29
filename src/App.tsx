@@ -3,7 +3,7 @@ import "./App.scss";
 import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import MyButton from "./components/Button/Button";
+import Button from "./components/Button/Button";
 
 function App() {
     // to set the <title> for each page, do this
@@ -36,12 +36,12 @@ function App() {
                 buttonProps={addButtonProps} 
             />
 
-            <MyButton 
+            <Button 
                 text="Button Here" 
                 variant="btn-primary" 
                 icon="bi-123" 
                 iconPosition="start" 
-                btnType="button" 
+                btnType="input" 
                 type="reset" 
                 iconAlign="middle" 
                 onClick={clickHandler}
