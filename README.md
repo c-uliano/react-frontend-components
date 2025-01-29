@@ -14,7 +14,7 @@ I have Bootstrap and Tailwind installed, and I should be able to style my compon
 
 My components are using Headless UI, but have expanded beyond the components provided by Headless. But why reinvent the wheel, as everyone keeps telling me. So alright, I'm using Headless UI and building out everything else I want.
 
-## My OG Components
+## My Components
 Some of these will be reworked, using Headless UI as the basis. I'll make sure to document the updates.
 
 Docmentation on how to use each component can be found within each component's `README.md`, linked below
@@ -23,8 +23,6 @@ Docmentation on how to use each component can be found within each component's `
 - **[Header](src/components/Header/README.md)**
 - **[Logo](src/components/Logo/README.md)**
 - **[NavLink](src/components/NavLink/README.md)**
-- **[Button](src/components/Button/README.md)**
+- **[Button](src/components/Button/README.md)** WIP to integrate Headless UI and to use any css framework
 - **[Hero](src/components/Hero/README.md)**
 
-## My Components v2
-I'll keep you posted.
