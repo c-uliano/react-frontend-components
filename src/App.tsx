@@ -1,8 +1,9 @@
 import "./App.scss";
+//import 'bootstrap/dist/css/bootstrap.min.css'; // if I'm just using Bootstrap as-is I can import it here.
 import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Button from "./components/Button/Button";
+import MyButton from "./components/Button/Button";
 
 function App() {
     // to set the <title> for each page, do this
@@ -19,13 +20,34 @@ function App() {
         btnType: 'anchor'
     }
 
+    const clickHandler = () => {
+        alert('button clicked');
+    }
+
     return (
         <div className="container-sm">
             <Header />
 
-            <Hero h1Header="Testing This" content="more content goes here" imgUrl="../../src/assets/roma.jpg" bgPosition="bottom center" buttonProps={addButtonProps} />
+            <Hero 
+                h1Header="Testing This" 
+                content="more content goes here" 
+                imgUrl="../../src/assets/roma.jpg" 
+                bgPosition="bottom center" 
+                buttonProps={addButtonProps} 
+            />
 
-            <Button text="Button Here" variant="btn-primary" icon="bi-123" iconPosition="end" btnType="input" type="reset" iconAlign="middle" />
+            <MyButton 
+                text="Button Here" 
+                variant="btn-primary" 
+                icon="bi-123" 
+                iconPosition="start" 
+                btnType="button" 
+                type="reset" 
+                iconAlign="middle" 
+                onClick={clickHandler}
+            />
+            
+            <br />
 
             <div className="m-2">
                 <p>

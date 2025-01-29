@@ -1,8 +1,16 @@
-// * custom overrides need to go before the import
-// $body-bg-dark: #242424;
+// * BOOTSTRAP WAY: custom overrides need to go before the import
+// $primary: #FF5733; 
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// import and customize Bootstrap this way, if customization of Bootstrap variables is necessary to the project. Don't need to import in the index/app file if doing
+@import 'bootstrap/scss/bootstrap';
 
+// ? TAILWIND WAY: customization is done in the tailwind.config.js file. See documentation for details on how to do this, but it's pretty easy. Better than Bootstrap I think
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+
+// * default styling I'm not using but don't want to delete for some reason
 // :root {
 //   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 //   line-height: 1.5;
