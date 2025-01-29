@@ -41,10 +41,9 @@ function App() {
                 variant="btn-primary" 
                 icon="bi-123" 
                 iconPosition="start" 
-                btnType="input" 
-                type="reset" 
-                iconAlign="middle" 
+                btnType="button" 
                 onClick={clickHandler}
+                size="btn-lg" 
             />
             
             <br />

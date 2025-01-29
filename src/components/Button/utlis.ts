@@ -25,12 +25,13 @@ type buttonVariants =
     'btn-outline-light' |
     'btn-outline-dark';
 
-type buttonSizes = 'btn-lg' | 'btn-sm';
+// type buttonSizes = 'btn-lg' | 'btn-sm';
 
 export interface ButtonProps {
     text?: string,
     onClick?: () => void, // do this instead of Function
-    size?: buttonSizes,
+    // size?: buttonSizes,
+    size?: string,
     variant?: buttonVariants, // //TODO: update this to a type with the Bootstrap button class options
     url?: string, 
     btnType?: ButtonTypes,

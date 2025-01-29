@@ -5,9 +5,9 @@
 @import 'bootstrap/scss/bootstrap';
 
 // ? TAILWIND WAY: customization is done in the tailwind.config.js file. See documentation for details on how to do this, but it's pretty easy. Better than Bootstrap I think
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 // * default styling I'm not using but don't want to delete for some reason
