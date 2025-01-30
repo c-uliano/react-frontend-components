@@ -39,8 +39,9 @@ Universal button for every situation
 - `url` (optional, string): the link
 - `btnType` (optional, string): to choose button type: `Link`, `input`, `button`, or `anchor`
 - `type` (optional, string): for use with `btnType="input"`, to determine what kind of input type it will be, `submit` or `reset`
-- `icon` (optional, string): set the icon by putting the bootstrap icon class name, i.e. `bi-boombox-fill`
-  - _**added as a class, so should be easy to adjust for styling with other icon libraries**_
+- `icon` (optional, string): set the icon by putting the icon class name, i.e. `bi bi-boombox-fill`
+  - currently only works with font icon libraries, such as Bootstrap Icons and FontAwesome
+  <!-- - _**added as a class, so should be easy to adjust for styling with other icon libraries**_ -->
 - `iconPosition` (optional, string): where the icon will be placed, at the `start` of the text, or the `end` of the text
 - `iconAlign` (optional, string): some icons look off-center compared to the text and need to be middle aligned, which you can do my setting `middle`.
   - available options: `baseline`, `top`, `middle`, `bottom`, `text-top`, `text-bottom`
