@@ -1,14 +1,18 @@
 import React from "react";
 import { ButtonProps } from "./utlis";
 import { Link } from "react-router-dom";
-import "./button.scss";
 import { Button } from '@headlessui/react';
+import styles from './button.module.scss';
 
 const MyButton = (props: ButtonProps) => {
 
-    const buttonClasses = `btn ${props.variant} ${props.size}`;
+    const buttonClasses = `${props.variant} ${props.size}`;
 
-    const icon = <i className={`bi ${props.icon} ${props.iconPosition === 'start' ? 'pe-2' : 'ps-2'} ${props.iconAlign ? `align-${props.iconAlign}` : "" }`}></i>;
+    // ! OG version with the bootstrap class for aligning the icon
+    // const icon = <i className={`${props.icon} ${props.iconPosition === 'start' ? styles.iconPaddingEnd : styles.iconPaddingStart} ${props.iconAlign ? `align-${props.iconAlign}` : "" }`}></i>;
+
+    // TODO: update to use any css framework classes to align the icon
+    const icon = <i className={`${props.icon} ${props.iconPosition === 'start' ? styles.iconPaddingEnd : styles.iconPaddingStart} ${props.iconAlign ? `${props.iconAlign}` : "" }`}></i>;
 
 
     const renderButton = () => {

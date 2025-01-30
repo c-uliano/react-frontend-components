@@ -3,7 +3,7 @@ import "./App.scss";
 import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import MyButton from "./components/Button/Button";
+import Button from "./components/Button/Button";
 
 function App() {
     // to set the <title> for each page, do this
@@ -13,7 +13,7 @@ function App() {
 
     const addButtonProps = {
         text: 'Button Here', 
-        variant: 'btn-outline-primary', 
+        variant: 'btn btn-outline-primary', 
         icon: 'bi-backpack', 
         iconPosition: 'end',
         url: '#',
@@ -26,7 +26,7 @@ function App() {
 
     return (
         <div className="container-sm">
-            <Header />
+            {/* <Header /> */}
 
             <Hero 
                 h1Header="Testing This" 
@@ -36,15 +36,15 @@ function App() {
                 buttonProps={addButtonProps} 
             />
 
-            <MyButton 
+            <Button 
                 text="Button Here" 
-                variant="btn-primary" 
+                variant="btn btn-primary" 
                 icon="bi-123" 
                 iconPosition="start" 
-                btnType="button" 
-                type="reset" 
-                iconAlign="middle" 
+                btnType="anchor" 
                 onClick={clickHandler}
+                size="btn-lg" 
+                iconAlign="align-super"
             />
             
             <br />
