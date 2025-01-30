@@ -23,6 +23,6 @@ Docmentation on how to use each component can be found within each component's `
 - **[Header](src/components/Header/README.md)**
 - **[Logo](src/components/Logo/README.md)**
 - **[NavLink](src/components/NavLink/README.md)**
-- **[Button](src/components/Button/README.md)** - WIP to integrate Headless UI and to use any css framework
+- **[Button](src/components/Button/README.md)** 
 - **[Hero](src/components/Hero/README.md)**
 
