@@ -43,10 +43,11 @@ Universal button for every situation
   - currently only works with font icon libraries, such as Bootstrap Icons and FontAwesome
   <!-- - _**added as a class, so should be easy to adjust for styling with other icon libraries**_ -->
 - `iconPosition` (optional, string): where the icon will be placed, at the `start` of the text, or the `end` of the text
-- `iconAlign` (optional, string): some icons look off-center compared to the text and need to be middle aligned, which you can do my setting `middle`.
-  - available options: `baseline`, `top`, `middle`, `bottom`, `text-top`, `text-bottom`
+- `iconAlign` (optional, string): to adjust the vertical alignment of icons
+  - works with Bootstrap of Tailwind css classes, or custom made classes
+  <!-- - available options: `baseline`, `top`, `middle`, `bottom`, `text-top`, `text-bottom`
     - typescript type options only, bootstrap classes
-  - _**added as a class, so should be easy to adjust for styling with other css frameworks**_
+  - _**added as a class, so should be easy to adjust for styling with other css frameworks**_ -->
 - `newTab` (optional, boolean): to open the link in a new tab
 
 ### Future Enhancements

@@ -26,7 +26,7 @@ function App() {
 
     return (
         <div className="container-sm">
-            <Header />
+            {/* <Header /> */}
 
             <Hero 
                 h1Header="Testing This" 
@@ -44,7 +44,7 @@ function App() {
                 btnType="anchor" 
                 onClick={clickHandler}
                 size="btn-lg" 
-                iconAlign="super"
+                iconAlign="align-super"
             />
             
             <br />
