@@ -4,7 +4,7 @@ type InputTypes = 'input' | 'submit' | 'reset';
 
 type IconPosition = 'start' | 'end';
 
-type IconAlignment = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-top' | 'text-bottom';
+// type IconAlignment = 'baseline' | 'top' | 'middle' | 'bottom' | 'text-top' | 'text-bottom';
 
 // type buttonVariants = 
 //     'btn-primary' | 
@@ -39,6 +39,7 @@ export interface ButtonProps {
     type?: InputTypes,
     icon?: string, // if this is truthy then an icon displays
     iconPosition?: IconPosition, // have to set something, no default icon placement
-    iconAlign?: IconAlignment,
+    iconAlign?: string, // so it can use a class from any css framework
+    // iconAlign?: IconAlignment,
     newTab?: boolean
 }

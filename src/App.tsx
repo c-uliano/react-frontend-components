@@ -41,9 +41,10 @@ function App() {
                 variant="btn btn-primary" 
                 icon="bi-123" 
                 iconPosition="start" 
-                btnType="button" 
+                btnType="anchor" 
                 onClick={clickHandler}
                 size="btn-lg" 
+                iconAlign="super"
             />
             
             <br />
