@@ -13,8 +13,9 @@ Universal button for every situation
       - if using Bootstrap, `btn-lg` would make the button bigger
       - for Tailwind, a combination of classes such as `p-2 text-xl` would make the button bigger
 - `variant` (optional, string): to style the button with custom made classes, or the css framework of your choice
-  - to style with Bootstrap for example, do something like `btn btn-primary`
-  - to style with Tailwind for example, do something like `bg-slate-400 hover:bg-slate-200 rounded-md text-black p-2 transition-colors`
+  - create classes, or use classes from css frameworks to size the button
+    - to style with Bootstrap for example, do something like `btn btn-primary`
+    - to style with Tailwind for example, do something like `bg-slate-400 hover:bg-slate-200 rounded-md text-black p-2 transition-colors`
   <!-- - adjust the Bootstrap variables to customize the color palette
   - available options:
     `btn-primary`
@@ -44,7 +45,8 @@ Universal button for every situation
   <!-- - _**added as a class, so should be easy to adjust for styling with other icon libraries**_ -->
 - `iconPosition` (optional, string): where the icon will be placed, at the `start` of the text, or the `end` of the text
 - `iconAlign` (optional, string): to adjust the vertical alignment of icons
-  - works with Bootstrap of Tailwind css classes, or custom made classes
+  - create classes, or use classes from css frameworks to size the button
+    - works with Bootstrap or Tailwind css 
   <!-- - available options: `baseline`, `top`, `middle`, `bottom`, `text-top`, `text-bottom`
     - typescript type options only, bootstrap classes
   - _**added as a class, so should be easy to adjust for styling with other css frameworks**_ -->
