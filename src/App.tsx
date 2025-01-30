@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Button from "./components/Button/Button";
+import ColorTheme from './components/ColorTheme/ColorTheme';
 
 function App() {
     // to set the <title> for each page, do this
@@ -27,6 +28,7 @@ function App() {
     return (
         <div className="container-sm">
             {/* <Header /> */}
+            <ColorTheme />
 
             <Hero 
                 h1Header="Testing This" 

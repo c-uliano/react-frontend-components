@@ -1,12 +1,3 @@
-// TODO
-// // so this button, when clicked, needs to target the data-bs-theme attribute in the html tag and change it to dark/light
-// // const rootElement = document.documentElement; To select the <html>
-// // rootElement.getAttribute(); - to get the attribute
-// // rootElement.setAttribute(); - to set the attribute
-// // rootElement.removeAttribute(); - to remove the attribute
-// // add props to customize or remove the button text
-// // add props to set starting theme
-
 import React, { useState, useEffect } from "react";
 
 const ColorThemeSimple = (props: { theme?: string; textVisible?: boolean; text?: string }) => {
