@@ -13,7 +13,7 @@ function App() {
 
     const addButtonProps = {
         text: 'Button Here', 
-        variant: 'btn-outline-primary', 
+        variant: 'btn btn-outline-primary', 
         icon: 'bi-backpack', 
         iconPosition: 'end',
         url: '#',
@@ -38,7 +38,7 @@ function App() {
 
             <Button 
                 text="Button Here" 
-                variant="btn-primary" 
+                variant="btn btn-primary" 
                 icon="bi-123" 
                 iconPosition="start" 
                 btnType="button" 

@@ -6,10 +6,11 @@ import styles from './button.module.scss';
 
 const MyButton = (props: ButtonProps) => {
 
-    const buttonClasses = `btn ${props.variant} ${props.size}`;
+    const buttonClasses = `${props.variant} ${props.size}`;
 
     // ! OG version with the bootstrap class for aligning the icon
     // const icon = <i className={`${props.icon} ${props.iconPosition === 'start' ? styles.iconPaddingEnd : styles.iconPaddingStart} ${props.iconAlign ? `align-${props.iconAlign}` : "" }`}></i>;
+
     // TODO: update to use any css framework classes to align the icon
     const icon = <i className={`${props.icon} ${props.iconPosition === 'start' ? styles.iconPaddingEnd : styles.iconPaddingStart}`}></i>;
 
